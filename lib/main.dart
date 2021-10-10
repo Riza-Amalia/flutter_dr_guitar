@@ -11,27 +11,182 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My App',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Flutter App',
       home: Scaffold(
-          appBar: AppBar(title: Text("Doctor Guitar App")),
-          body: Container(
-            child: Image(
-              image: NetworkImage(
-                  'https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3VpdGFyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'),
+        appBar: AppBar(title: Text("Doctor Guitar App")),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: const Color(0xff7c94b6),
+                image: const DecorationImage(
+                  image: NetworkImage(
+                      'https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3VpdGFyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'),
+                  fit: BoxFit.fitWidth,
+                ),
+                border: Border.all(
+                  color: Colors.transparent,
+                  width: 8,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              height: 210,
+              width: 500,
+              margin: EdgeInsets.all(20),
             ),
-          )),
+            Container(
+              child: Text(
+                'Welcome To Dr. Guitar',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xff7c94b6),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          'https://banner2.cleanpng.com/20180823/wk/kisspng-computer-icons-service-user-travel-ims-an-amadeus-setting-svg-png-icon-free-download-1999-2-onl-5b7f0a40a5df71.0483892015350523526794.jpg'),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    border: Border.all(
+                      color: Colors.transparent,
+                      width: 8,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  height: 120,
+                  width: 120,
+                  margin: EdgeInsets.all(20),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xff7c94b6),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          'https://www.pngfind.com/pngs/m/350-3504403_png-file-svg-free-booking-icon-transparent-png.png'),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    border: Border.all(
+                      color: Colors.transparent,
+                      width: 8,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  height: 120,
+                  width: 120,
+                  margin: EdgeInsets.all(20),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  child: Text(
+                    'Service',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  height: 30,
+                  width: 100,
+                  margin: const EdgeInsets.only(left: 50.0, right: 20.0),
+                ),
+                Container(
+                  child: Text(
+                    'Booking',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  height: 30,
+                  width: 100,
+                  margin: const EdgeInsets.only(left: 20.0, right: 30.0),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xff7c94b6),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          'https://w7.pngwing.com/pngs/512/365/png-transparent-management-consulting-consultant-computer-icons-business-human-resource-consulting-consult-company-text-service.png'),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    border: Border.all(
+                      color: Colors.transparent,
+                      width: 8,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  height: 120,
+                  width: 120,
+                  margin: EdgeInsets.all(20),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xff7c94b6),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          'https://e7.pngegg.com/pngimages/213/478/png-clipart-computer-icons-scalable-graphics-font-conference-for-management-accounting-research-about-icon-text-computer-program.png'),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    border: Border.all(
+                      color: Colors.transparent,
+                      width: 8,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  height: 120,
+                  width: 120,
+                  margin: EdgeInsets.all(20),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  child: Text(
+                    'Consult',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  height: 30,
+                  width: 100,
+                  margin: const EdgeInsets.only(left: 50.0, right: 20.0),
+                ),
+                Container(
+                  child: Text(
+                    'About',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  height: 30,
+                  width: 100,
+                  margin: const EdgeInsets.only(left: 40.0, right: 30.0),
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
